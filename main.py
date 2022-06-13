@@ -17,8 +17,18 @@ def clear():
     os.system("cls")
 
 
+def game_loop():
+    state = GameState()
+    while True:
+        clear()
+        print_game_state(state)
+        input()
+        state.addcookie()
+
+
 def main():
-    print("welcome")
+    game_loop()
+
 
 
 if __name__ == "__main__":
